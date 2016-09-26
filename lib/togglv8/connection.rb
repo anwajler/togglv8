@@ -63,7 +63,6 @@ module TogglV8
       return {} if full_resp == {}
       begin
         resp = Oj.load(full_resp.body)
-        return resp['data'] if resp.respond_to?(:has_key?) && resp.has_key?('data')
         return resp
       rescue Oj::ParseError
         return full_resp.body
