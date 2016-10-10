@@ -11,7 +11,6 @@ module TogglV8
     attr_accessor :workspace_id
 
     def initialize(opts={})
-      debug(false)
 
       @user_agent = TogglV8::NAME
 
